@@ -1,0 +1,9 @@
+FROM centos:7
+MAINTAINER Rogerio Martinho
+ENV PORT=80
+RUN yum install epel-release -y
+RUN yum install nginx nginx-extras -y
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+EXPOSE $PORT
+ENTRYPOINT ["nginx"]
+CMD ["-g", "daemon off;"]
