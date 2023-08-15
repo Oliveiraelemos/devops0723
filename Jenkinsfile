@@ -12,9 +12,9 @@ pipeline {
             steps {
                 script {
                     // Nome das imagens
-                    def imageNameWeb = 'rogerramossilva/web'
-                    def imageNameDB = 'rogerramossilva/db'
-                    def imageNameNginx = 'rogerramossilva/nginx'
+                    def imageNameWeb = 'oliveiraelemos/web'
+                    def imageNameDB = 'oliveiraelemos/db'
+                    def imageNameNginx = 'oliveiraelemos/nginx'
 
                     // Executa o build das imagens com os respectivos Dockerfiles
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhubrogerio') {
